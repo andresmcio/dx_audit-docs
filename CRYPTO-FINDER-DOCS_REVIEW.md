@@ -27,4 +27,8 @@ This indicates that the API endpoint is reachable, but the current API Key lacks
 Once the permission issue is resolved, I suggest adding a **"Pre-flight Access Check"** section to the guide. This would help users identify if their API Key is correctly provisioned for Crypto scanning *before* they attempt to run a large-scale audit, preventing the "resource does not exist" confusion.
 
 ---
-*Note: I will resume the full validation of the flags and output examples as soon as the account permissions are checked.*
+## UPDATE:
+
+Retried setting again the API URL, because the url referred in the stdio error shows the `/scan`, after trying to curl another endpoint with the same key, it works, so it should have been an error setting up the environment variables.
+
+In this case is not a documentation issue, so from the tool's side it might be good to include a verification of the source url the ruleset is trying to be downloaded to catch the error.
